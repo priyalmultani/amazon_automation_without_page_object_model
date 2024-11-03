@@ -67,8 +67,7 @@ public class AmazonCartTest extends BaseTest{
 	    WebElement cartProduct = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(sitedata.getProperty("cartProduct_xpath"))));
 	    String cartProductTitle = cartProduct.getText();
 	    Assert.assertEquals(cartProductTitle, productTitle, "Product is not present in the cart");
-}
+	}
 
 }
 
-//1. Properties file
