@@ -58,18 +58,15 @@ public class AmazonCartTest extends BaseTest{
 	    WebElement addToCartButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(sitedata.getProperty("addToCartButton_xpath"))));
 	    js.executeScript("arguments[0].scrollIntoView(true);", addToCartButton);
 	    addToCartButton.click();
-	    Thread.sleep(30);
 	    
 	    // Step 8: Click on Cart button and verify product is in cart
 	    WebElement cartButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(sitedata.getProperty("cartButton_xpath"))));
 	    cartButton.click();
-	    Thread.sleep(30);
 	    
 	    // Verify that the product is in the cart
 	    WebElement cartProduct = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(sitedata.getProperty("cartProduct_xpath"))));
 	    String cartProductTitle = cartProduct.getText();
 	    Assert.assertEquals(cartProductTitle, productTitle, "Product is not present in the cart");
-	    Thread.sleep(30);
 }
 
 }
