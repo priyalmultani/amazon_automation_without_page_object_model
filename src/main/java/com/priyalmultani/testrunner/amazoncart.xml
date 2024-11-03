@@ -1,0 +1,9 @@
+<suite name="Amazon Cart Automation">
+
+<test name="Add To Cart">
+<classes>
+<class name="com.priyalmultani.amazoncart.AmazonCartTest"></class>
+</classes>
+</test>
+
+</suite>
